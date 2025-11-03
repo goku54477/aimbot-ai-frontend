@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nexus Pulse - Telegram Bot</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;family=Orbitron:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .glass-card {
+            background-color: rgba(21, 28, 41, 0.6); /* Semi-transparent base */
+            -webkit-backdrop-filter: blur(20px); /* For Safari */
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.1), 0 0 40px rgba(139, 0, 255, 0.1);
+        }
+        .neon-glow {
+            filter: drop-shadow(0 0 8px #00D4FF) drop-shadow(0 0 16px #00D4FF);
+        }
+        .cta-container .form-container {
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+            transform: translateY(-10px);
+            pointer-events: none;
+        }
+        .cta-container:hover .form-container {
+            max-height: 100px;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+         .cta-container .button-text {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 100px;
+            opacity: 1;
+        }
+        .cta-container:hover .button-text {
+            max-height: 0;
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00D4FF",
+                        "secondary": "#8B00FF",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0A0A0A",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "orbitron": ["Orbitron", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col items-center justify-center p-4" style="background-image: radial-gradient(circle at top left, rgba(139, 0, 255, 0.15), transparent 30%), radial-gradient(circle at bottom right, rgba(0, 212, 255, 0.15), transparent 30%);">
+<div class="glass-card flex w-full max-w-2xl flex-col items-center gap-6 rounded-xl p-6 text-center md:p-10">
+<div class="neon-glow">
+<svg fill="none" height="80" viewbox="0 0 24 24" width="80" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="url(#paint0_linear_101_2)"></path>
+<path d="M17.68 8.34C17.7628 8.01353 17.6521 7.67134 17.4098 7.45105C17.1675 7.23075 16.8291 7.15934 16.52 7.26L5.86 10.96C5.52044 11.071 5.25894 11.3571 5.15003 11.7011C5.04113 12.0451 5.09758 12.421 5.30001 12.7L7.04 14.39L8.91001 19.12C9.03457 19.4316 9.29302 19.6738 9.61001 19.78C9.92987 19.8853 10.2796 19.8451 10.58 19.67L12.42 18.66L14.73 16.26L17.68 8.34Z" fill="white"></path>
+<path d="M10.13 15.34L14.73 10.74L12.56 16.03L10.13 15.34Z" fill="#B2E0D4"></path>
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="paint0_linear_101_2" x1="2" x2="22" y1="12" y2="12">
+<stop stop-color="#00D4FF"></stop>
+<stop offset="1" stop-color="#8B00FF"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+<h1 class="font-orbitron text-3xl font-bold tracking-wide text-white md:text-4xl">Telegram Bot Live Now</h1>
+<p class="max-w-lg text-base font-normal leading-relaxed text-slate-300">
+              Get instant alerts on your phone. Fast, reliable, esports-ready. Why wait? Sign up today for priority access to pro-level insights and beat your squad to every clutch moment.
+            </p>
+<div class="cta-container group relative mt-4 flex w-full max-w-sm flex-col items-center justify-center">
+<div class="relative flex h-14 w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gradient-to-r from-primary to-secondary p-0.5 shadow-lg shadow-primary/20 transition-all duration-300 group-hover:shadow-xl group-hover:shadow-secondary/30">
+<div class="flex h-full w-full items-center justify-center rounded-[7px] bg-background-dark px-5">
+<span class="button-text absolute font-orbitron text-base font-bold text-white">DM for Access</span>
+<div class="form-container flex w-full items-stretch transition-all duration-300">
+<label class="sr-only" for="email-input">Email address</label>
+<input class="form-input h-10 flex-1 appearance-none border-none bg-transparent p-0 text-white placeholder-slate-500 ring-0 focus:outline-none focus:ring-0" id="email-input" placeholder="Enter your email for a link" type="email"/>
+<button aria-label="Submit email" class="ml-2 flex items-center justify-center text-primary transition-transform duration-200 hover:scale-110">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nexus Pulse - Coming Soon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Orbitron:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .text-glow-blue {
+                text-shadow: 0 0 8px rgba(0, 212, 255, 0.6), 0 0 20px rgba(0, 212, 255, 0.4);
+            }
+            .card-glow-pulse {
+                box-shadow: 0 0 20px rgba(139, 0, 255, 0.1), 0 0 40px rgba(0, 212, 255, 0.1);
+                animation: pulse-glow 4s infinite ease-in-out;
+            }
+            @keyframes pulse-glow {
+                0%, 100% {
+                    box-shadow: 0 0 25px rgba(139, 0, 255, 0.2), 0 0 50px rgba(0, 212, 255, 0.2);
+                }
+                50% {
+                    box-shadow: 0 0 45px rgba(139, 0, 255, 0.4), 0 0 80px rgba(0, 212, 255, 0.4);
+                }
+            }
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#00D4FF",
+              "background-light": "#f5f7f8",
+              "background-dark": "#0A0A0A",
+              "accent-purple": "#8B00FF",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"],
+              "orbitron": ["Orbitron", "sans-serif"]
+            },
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-dark font-display text-[#EAEAEA]">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-background-dark p-4">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnZxYstbfPgqLWPDpqg9qmD_Q1Z5HVokF5CzTPjT04G-0IsTaMvgzryGvju4FCCaOxjC42WOhxkQaH7E0eEBg1mnKXhd4YyD_dtqhd62H0huo4NSMfpYuVct1jS9qan7qT-9TN8CRgX7Wj7i7kIGFms7QgdtOv-YZ4UltniEeCIRMCSECjfXMU-1hxmZLOgjRvKkW-Pwo8IJDDZPnBDLHo47bk2ZiVzY_BtkxkJcy5dfc_cuFNQiM4ujJSgmVgQ8iaFrmWZS6TFut9'); opacity: 0.1;"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/80 to-transparent"></div>
+<div class="absolute -top-1/4 left-1/4 h-96 w-96 rounded-full bg-accent-purple/20 blur-3xl filter"></div>
+<div class="absolute -bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-primary/20 blur-3xl filter"></div>
+</div>
+<header class="absolute top-0 left-0 right-0 z-20 flex items-center justify-between p-6 sm:px-10 lg:px-20">
+<div class="flex items-center gap-3 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="font-orbitron text-xl font-bold leading-tight tracking-wider text-white text-glow-blue">Nexus Pulse</h2>
+</div>
+</header>
+<main class="relative z-10 flex flex-col items-center text-center">
+<div class="card-glow-pulse w-full max-w-lg rounded-2xl border border-white/10 bg-black/30 p-8 shadow-2xl backdrop-blur-xl md:p-12">
+<div class="flex flex-col items-center gap-6">
+<h1 class="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                        Web Dashboard Coming Soon
+                    </h1>
+<p class="text-base leading-relaxed text-white/70">
+                        Elevate your game while you wait – early access users get exclusive tournament predictions.
+                    </p>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

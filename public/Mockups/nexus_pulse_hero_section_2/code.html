@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nexus Pulse - Real-Time Esports Alerts</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Orbitron:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .text-glow-blue {
+            text-shadow: 0 0 8px rgba(0, 212, 255, 0.6), 0 0 20px rgba(0, 212, 255, 0.4);
+        }
+        .text-glow-purple {
+            text-shadow: 0 0 8px rgba(139, 0, 255, 0.6), 0 0 20px rgba(139, 0, 255, 0.4);
+        }
+        .btn-glow {
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.4), 0 0 30px rgba(0, 212, 255, 0.2);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.7), 0 0 50px rgba(0, 212, 255, 0.5);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#00D4FF",
+              "background-light": "#f5f7f8",
+              "background-dark": "#0A0A0A",
+              "accent-purple": "#8B00FF",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"],
+              "orbitron": ["Orbitron", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-dark font-display text-[#EAEAEA]">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-background-dark">
+<!-- Background elements for visual effect -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnZxYstbfPgqLWPDpqg9qmD_Q1Z5HVokF5CzTPjT04G-0IsTaMvgzryGvju4FCCaOxjC42WOhxkQaH7E0eEBg1mnKXhd4YyD_dtqhd62H0huo4NSMfpYuVct1jS9qan7qT-9TN8CRgX7Wj7i7kIGFms7QgdtOv-YZ4UltniEeCIRMCSECjfXMU-1hxmZLOgjRvKkW-Pwo8IJDDZPnBDLHo47bk2ZiVzY_BtkxkJcy5dfc_cuFNQiM4ujJSgmVgQ8iaFrmWZS6TFut9'); opacity: 0.1;"></div>
+<div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-background-dark to-transparent"></div>
+<div class="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-background-dark to-transparent"></div>
+</div>
+<div class="relative z-10 flex h-full w-full flex-col">
+<header class="absolute top-0 left-0 right-0 z-20 flex items-center justify-between whitespace-nowrap p-6 sm:px-10 lg:px-20">
+<div class="flex items-center gap-3 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="font-orbitron text-xl font-bold leading-tight tracking-wider text-white text-glow-blue">Nexus Pulse</h2>
+</div>
+<div class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-medium leading-normal text-white/80 transition-colors hover:text-primary" href="#">Features</a>
+<a class="text-sm font-medium leading-normal text-white/80 transition-colors hover:text-primary" href="#">Pricing</a>
+<a class="text-sm font-medium leading-normal text-white/80 transition-colors hover:text-primary" href="#">Login</a>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-wide transition-all hover:bg-white btn-glow">
+<span class="truncate">Join the Beta</span>
+</button>
+</div>
+<div class="md:hidden">
+<button class="text-white">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 items-center justify-center px-4 py-20 text-center">
+<div class="flex max-w-4xl flex-col items-center gap-6 sm:gap-8">
+<div class="flex flex-col gap-4">
+<h1 class="font-orbitron text-5xl font-black uppercase leading-tight tracking-wider text-white text-glow-blue sm:text-6xl md:text-7xl lg:text-8xl">
+                            Nexus Pulse
+                        </h1>
+<h2 class="max-w-2xl text-base font-normal leading-normal text-white/80 sm:text-lg md:text-xl">
+                            Real-time notifications for tournaments, player stats, and match alerts – never miss a play.
+                        </h2>
+</div>
+<button class="btn-glow flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 sm:h-14 sm:px-8 bg-primary text-background-dark text-base font-bold leading-normal tracking-wide transition-transform hover:scale-105 sm:text-lg">
+<span class="truncate">Get Instant Access</span>
+</button>
+<p class="max-w-xl text-sm font-normal leading-normal text-white/60">
+                        Join 10K+ elite gamers securing their edge with instant alerts. Sign up now – limited beta spots filling fast before the next major tournament drops.
+                    </p>
+</div>
+</main>
+</div>
+</div>
+</body></html>
