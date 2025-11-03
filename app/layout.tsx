@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   title: 'Aimbot AI: Polymarket Esports Alerts | Beta Join',
   description: 'Real-time Polymarket esports alerts with 78% win rate. Live 3%+ edges on Dota/CS:GO. Join 10K+ elite gamers. Kalshi integration coming Q1 2026.',
   icons: {
-    icon: '/Logo/white logo with no BG.png',
-    shortcut: '/Logo/white logo with no BG.png',
-    apple: '/Logo/white logo with no BG.png',
+    icon: '/Logo/Logo icon only.png',
+    shortcut: '/Logo/Logo icon only.png',
+    apple: '/Logo/Logo icon only.png',
   },
   openGraph: {
     title: 'AIMBOT AI',
