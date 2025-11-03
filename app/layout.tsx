@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/Logo/Logo icon only.png',
+        url: '/Logo/white logo with no BG.png',
         sizes: 'any',
       },
     ],
-    shortcut: '/Logo/Logo icon only.png',
-    apple: '/Logo/Logo icon only.png',
+    shortcut: '/Logo/white logo with no BG.png',
+    apple: '/Logo/white logo with no BG.png',
   },
   openGraph: {
     title: 'AIMBOT AI',
