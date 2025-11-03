@@ -9,7 +9,22 @@ export const metadata: Metadata = {
   title: 'Aimbot AI: Polymarket Esports Alerts | Beta Join',
   description: 'Real-time Polymarket esports alerts with 78% win rate. Live 3%+ edges on Dota/CS:GO. Join 10K+ elite gamers. Kalshi integration coming Q1 2026.',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/Logo/white logo with no BG.png',
+    shortcut: '/Logo/white logo with no BG.png',
+    apple: '/Logo/white logo with no BG.png',
+  },
+  openGraph: {
+    title: 'AIMBOT AI',
+    description: 'Polymarket esports alerts — premium gaming intelligence.',
+    url: 'https://aimbot-ai.vercel.app',
+    type: 'website',
+    images: ['/Logo/white logo with no BG.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AIMBOT AI',
+    description: 'Polymarket esports alerts — premium gaming intelligence.',
+    images: ['/Logo/white logo with no BG.png'],
   },
 }
 

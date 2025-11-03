@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-background-dark/50 backdrop-blur-sm">
@@ -12,7 +14,16 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/40">© 2025 AIMBOT AI</p>
+          <div className="flex items-center gap-2">
+            <Image
+              src="/Logo/white logo with no BG.png"
+              alt="AIMBOT AI"
+              width={80}
+              height={24}
+              className="opacity-70"
+            />
+            <p className="text-xs text-white/40">© 2025 AIMBOT AI</p>
+          </div>
 
           <div className="flex items-center gap-4">
             <a className="text-primary icon-glow" href="#" aria-label="X">
