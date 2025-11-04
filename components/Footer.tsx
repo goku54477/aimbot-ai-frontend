@@ -21,6 +21,7 @@ export default function Footer() {
               width={80}
               height={24}
               className="opacity-70"
+              style={{ filter: 'drop-shadow(0 0 8px rgba(0, 212, 255, 0.6)) drop-shadow(0 0 20px rgba(0, 212, 255, 0.4))' }}
             />
             <p className="text-xs text-white/40">© 2025 AIMBOT AI</p>
           </div>

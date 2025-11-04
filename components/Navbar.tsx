@@ -18,6 +18,7 @@ export default function Navbar() {
               width={160} 
               height={48}
               className="h-12 w-auto"
+              style={{ filter: 'drop-shadow(0 0 8px rgba(0, 212, 255, 0.6)) drop-shadow(0 0 20px rgba(0, 212, 255, 0.4))' }}
             />
             <span className="font-orbitron text-xl font-bold uppercase tracking-wider text-glow-blue">AIMBOT AI</span>
           </div>
