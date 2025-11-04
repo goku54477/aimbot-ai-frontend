@@ -15,10 +15,10 @@ export default function Navbar() {
             <Image 
               src="/Logo/image-removebg-preview 1.png" 
               alt="AIMBOT AI Logo" 
-              width={160} 
-              height={48}
-              className="h-12 w-auto"
-              style={{ filter: 'drop-shadow(0 0 8px rgba(0, 212, 255, 0.6)) drop-shadow(0 0 20px rgba(0, 212, 255, 0.4))' }}
+              width={180} 
+              height={54}
+              className="h-14 w-auto"
+              style={{ filter: 'drop-shadow(0 0 16px rgba(0, 212, 255, 1)) drop-shadow(0 0 32px rgba(0, 212, 255, 0.8)) drop-shadow(0 0 48px rgba(0, 212, 255, 0.6))' }}
             />
             <span className="font-orbitron text-xl font-bold uppercase tracking-wider text-glow-blue">AIMBOT AI</span>
           </div>

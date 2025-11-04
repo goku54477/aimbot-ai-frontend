@@ -18,10 +18,10 @@ export default function Footer() {
             <Image
               src="/Logo/image-removebg-preview 1.png"
               alt="AIMBOT AI"
-              width={80}
-              height={24}
-              className="opacity-70"
-              style={{ filter: 'drop-shadow(0 0 8px rgba(0, 212, 255, 0.6)) drop-shadow(0 0 20px rgba(0, 212, 255, 0.4))' }}
+              width={140}
+              height={42}
+              className="h-11 w-auto"
+              style={{ filter: 'drop-shadow(0 0 16px rgba(0, 212, 255, 1)) drop-shadow(0 0 32px rgba(0, 212, 255, 0.8)) drop-shadow(0 0 48px rgba(0, 212, 255, 0.6))' }}
             />
             <p className="text-xs text-white/40">© 2025 AIMBOT AI</p>
           </div>
