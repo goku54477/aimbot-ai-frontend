@@ -24,7 +24,7 @@ export default function LoadingScreen() {
     <div className="fixed inset-0 bg-background-dark z-50 flex items-center justify-center">
       <div className="text-center">
         <Image
-          src="/Logo/white logo with no BG.png"
+          src="/Logo/image-removebg-preview 1.png"
           alt="AIMBOT AI"
           width={160}
           height={48}

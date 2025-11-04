@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <Image
-              src="/Logo/white logo with no BG.png"
+              src="/Logo/image-removebg-preview 1.png"
               alt="AIMBOT AI"
               width={80}
               height={24}
