@@ -11,25 +11,25 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/Logo/image-removebg-preview 1.png',
+        url: '/Logo/white logo with eyelid x BG.png',
         sizes: 'any',
       },
     ],
-    shortcut: '/Logo/image-removebg-preview 1.png',
-    apple: '/Logo/image-removebg-preview 1.png',
+    shortcut: '/Logo/white logo with eyelid x BG.png',
+    apple: '/Logo/white logo with eyelid x BG.png',
   },
   openGraph: {
     title: 'AIMBOT AI',
     description: 'Polymarket esports alerts — premium gaming intelligence.',
     url: 'https://aimbot-ai.vercel.app',
     type: 'website',
-    images: ['/Logo/image-removebg-preview 1.png'],
+    images: ['/Logo/white logo with eyelid x BG.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AIMBOT AI',
     description: 'Polymarket esports alerts — premium gaming intelligence.',
-    images: ['/Logo/image-removebg-preview 1.png'],
+    images: ['/Logo/white logo with eyelid x BG.png'],
   },
 }
 

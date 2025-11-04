@@ -13,7 +13,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center gap-0 text-white">
             <Image 
-              src="/Logo/image-removebg-preview 1.png" 
+              src="/Logo/white logo with eyelid x BG.png" 
               alt="AIMBOT AI Logo" 
               width={180} 
               height={54}
