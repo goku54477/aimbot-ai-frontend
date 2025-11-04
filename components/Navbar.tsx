@@ -15,9 +15,9 @@ export default function Navbar() {
             <Image 
               src="/Logo/white logo with eyelid x BG.png" 
               alt="AIMBOT AI Logo" 
-              width={180} 
-              height={54}
-              className="h-14 w-auto"
+              width={200} 
+              height={60}
+              className="h-16 w-auto"
               style={{ filter: 'drop-shadow(0 0 16px rgba(0, 212, 255, 1)) drop-shadow(0 0 32px rgba(0, 212, 255, 0.8)) drop-shadow(0 0 48px rgba(0, 212, 255, 0.6))' }}
             />
             <span className="font-orbitron text-xl font-bold uppercase tracking-wider text-glow-blue">AIMBOT AI</span>
