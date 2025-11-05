@@ -27,11 +27,11 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-4">
-            <a className="text-primary icon-glow" href="#" aria-label="X">
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+            <a className="text-primary icon-glow" href="https://x.com/Aimbot_AI" target="_blank" rel="noopener noreferrer" aria-label="X">
+              <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" strokeWidth="0.5" stroke="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
             </a>
-            <a className="text-primary icon-glow" href="#" aria-label="Telegram">
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.884 12.333l-3.333 1.897 3.333 1.897 8.333-4.762-11.666-6.666 2.38 9.524 2.619-2.619zM22.067.886L.933 11.442c-1.238.566-1.223 2.3.016 2.85l5.053 1.805 11.968-7.585-8.735 8.164 8.78 3.136c1.218.435 2.375-.466 2.05-1.786l3.05-14.54c.36-1.597-1.002-2.82-2.037-2.18z"></path></svg>
+            <a className="text-primary icon-glow" href="https://t.me/AimBot_AI" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+              <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" strokeWidth="0.5" stroke="currentColor"><path d="M11.884 12.333l-3.333 1.897 3.333 1.897 8.333-4.762-11.666-6.666 2.38 9.524 2.619-2.619zM22.067.886L.933 11.442c-1.238.566-1.223 2.3.016 2.85l5.053 1.805 11.968-7.585-8.735 8.164 8.78 3.136c1.218.435 2.375-.466 2.05-1.786l3.05-14.54c.36-1.597-1.002-2.82-2.037-2.18z"></path></svg>
             </a>
           </div>
 
