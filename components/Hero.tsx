@@ -9,7 +9,7 @@ export default function Hero() {
     setLoading(true)
     setTimeout(() => {
       window.location.href = 'https://t.me/AimBot_AI'
-    }, 1500)
+    }, 1250)
   }
 
   return (

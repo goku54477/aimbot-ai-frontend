@@ -17,7 +17,7 @@ export default function Home() {
     setLoading(true)
     setTimeout(() => {
       window.location.href = 'https://t.me/AimBot_AI'
-    }, 1500)
+    }, 1250)
   }
 
   if (!mounted) return null
