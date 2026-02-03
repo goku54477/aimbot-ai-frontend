@@ -46,7 +46,7 @@ const ChatTerminal: React.FC = () => {
         {messages.map((m, i) => (
           <div key={i} className={`${m.role === 'assistant' ? 'text-zinc-300' : 'text-white'}`}>
             <span className="text-zinc-600 mr-2">[{m.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}]</span>
-            <span className="font-bold mr-2 uppercase tracking-tight">{m.role === 'assistant' ? 'QT_CAP' : 'INVESTOR'}>:</span>
+            <span className="font-bold mr-2 uppercase tracking-tight">{m.role === 'assistant' ? 'QT_CAP>' : 'INVESTOR>'}:</span>
             <span>{m.content}</span>
           </div>
         ))}
