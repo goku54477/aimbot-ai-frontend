@@ -12,21 +12,31 @@ const Logo: React.FC<LogoProps> = ({ size = 40, className = "", variant = 'icon'
   const iconId = "1yJ605VtuFwciqvj92qlS_Vg5MTyjm5vv";
   // Full Branding (Logo + Text) ID
   const fullId = "14UCe-pGmhW6ASzL5zG8wNyCRJtM0l2Wz";
-  
-  const fileId = variant === 'full' ? fullId : iconId;
-  const src = `https://drive.google.com/uc?export=view&id=${fileId}`;
-  
+
+  if (variant === 'full') {
+    return (
+      <div className={`relative flex items-center justify-center ${className}`} style={{ height: size }}>
+        <img
+          src="/logo.png"
+          alt="AIMBOT"
+          className="h-full w-auto object-contain"
+          style={{ pointerEvents: 'none' }}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className={`relative flex items-center justify-center ${className}`} style={{ height: size }}>
-      <img 
-        src={src} 
-        alt="AIMBOT" 
+      <img
+        src={`https://drive.google.com/uc?export=view&id=${iconId}`}
+        alt="AIMBOT"
         className="h-full w-auto object-contain"
         style={{ pointerEvents: 'none' }}
         onError={(e) => {
           const target = e.target as HTMLImageElement;
           if (!target.src.includes('lh3.googleusercontent.com')) {
-            target.src = `https://lh3.googleusercontent.com/u/0/d/${fileId}`;
+            target.src = `https://lh3.googleusercontent.com/u/0/d/${iconId}`;
           }
         }}
       />

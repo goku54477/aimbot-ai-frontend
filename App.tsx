@@ -13,7 +13,7 @@ const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'dashboard' | 'roadmap' | 'docs' | 'analytics'>('dashboard');
   const [loading, setLoading] = useState(true);
 
-  const isLockedView = activeTab === 'dashboard' || activeTab === 'docs' || activeTab === 'analytics';
+  const isLockedView = activeTab === 'dashboard' || activeTab === 'docs' || activeTab === 'analytics' || activeTab === 'roadmap';
 
   const handleRequestAccess = () => {
     window.open('https://t.me/Aimbot_AI_Chat', '_blank');
@@ -145,7 +145,7 @@ const App: React.FC = () => {
                 </div>
               )}
 
-              {(activeTab === 'docs' || activeTab === 'analytics') && (
+              {(activeTab === 'docs' || activeTab === 'analytics' || activeTab === 'roadmap') && (
                 <SyncPlaceholder title="Syncing" subtitle="Protocol Calibration in Progress" />
               )}
 
