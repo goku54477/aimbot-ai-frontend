@@ -1,14 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIMBOT | Multi-Strategy Yield Aggregator</title>
+    <title>Aimbot AI | Automated Agents for Prediction Markets</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@100;400&display=swap');
-        
+
         :root {
             --aimbot-blue: #00B0F0;
         }
@@ -22,24 +22,37 @@
             letter-spacing: -0.01em;
         }
 
-        .mono { font-family: 'JetBrains Mono', monospace; }
-
-        .aimbot-blue { color: var(--aimbot-blue); }
-        .aimbot-bg-blue { background-color: var(--aimbot-blue); }
-        .aimbot-border-blue { border-color: var(--aimbot-blue); }
-        
-        .aimbot-glow { 
-            box-shadow: 0 0 40px rgba(0, 176, 240, 0.25); 
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
         }
-        
-        .aimbot-glow-text { 
-            text-shadow: 0 0 20px rgba(0, 176, 240, 0.6); 
+
+        .aimbot-blue {
+            color: var(--aimbot-blue);
+        }
+
+        .aimbot-bg-blue {
+            background-color: var(--aimbot-blue);
+        }
+
+        .aimbot-border-blue {
+            border-color: var(--aimbot-blue);
+        }
+
+        .aimbot-glow {
+            box-shadow: 0 0 40px rgba(0, 176, 240, 0.25);
+        }
+
+        .aimbot-glow-text {
+            text-shadow: 0 0 20px rgba(0, 176, 240, 0.6);
         }
 
         /* Fixed background layers to prevent "screen" effect over UI */
         .grain {
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: url('https://grainy-gradients.vercel.app/noise.svg');
             opacity: 0.02;
             pointer-events: none;
@@ -48,16 +61,28 @@
 
         .vignette {
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.8) 100%);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.8) 100%);
             pointer-events: none;
             z-index: 0;
         }
 
         /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: #000000; }
-        ::-webkit-scrollbar-thumb { background: var(--aimbot-blue); border-radius: 10px; }
+        ::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--aimbot-blue);
+            border-radius: 10px;
+        }
 
         .terminal-blurred {
             filter: blur(24px) brightness(0.4) grayscale(0.8);
@@ -79,7 +104,7 @@
             box-shadow: 0 0 30px rgba(0, 176, 240, 0.4);
             transform: scale(1.02);
         }
-        
+
         .glass-panel {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.15);
@@ -87,8 +112,15 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.98); }
-            to { opacity: 1; transform: scale(1); }
+            from {
+                opacity: 0;
+                transform: scale(0.98);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         .animate-premium-fade {
@@ -108,11 +140,16 @@
         }
 
         @keyframes scanMove {
-            0% { top: 0%; }
-            100% { top: 100%; }
+            0% {
+                top: 0%;
+            }
+
+            100% {
+                top: 100%;
+            }
         }
     </style>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
@@ -124,10 +161,12 @@
 }
 </script>
 </head>
+
 <body>
     <div class="grain"></div>
     <div class="vignette"></div>
     <div id="root"></div>
-<script type="module" src="/index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
