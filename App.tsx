@@ -109,13 +109,17 @@ const App: React.FC = () => {
                       Yield Aggregator for Prediction Markets
                     </h2>
 
-                    <div className="w-full max-w-2xl mx-auto mb-6 md:mb-10 pointer-events-auto">
-                      <WaitlistForm />
-                    </div>
+                    <p className="font-mono text-[11px] md:text-[13px] text-zinc-300 uppercase tracking-widest mb-6 md:mb-10 animate-premium-fade">
+                      Automated Agents for Prediction Markets
+                    </p>
 
-                    <h1 className="text-[14vw] md:text-[10vw] font-[900] uppercase tracking-[-0.04em] text-white leading-none">
+                    <h1 className="text-[14vw] md:text-[10vw] font-[900] uppercase tracking-[-0.04em] text-white leading-none mb-6 md:mb-10">
                       Coming Soon
                     </h1>
+
+                    <div className="w-full max-w-2xl mx-auto pointer-events-auto">
+                      <WaitlistForm />
+                    </div>
                     <div className="mt-8 md:mt-16 h-[1px] w-48 md:w-96 mx-auto bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
 
                     <div className="mt-10 md:mt-16 space-y-6 md:space-y-8 pointer-events-auto">
