@@ -105,13 +105,9 @@ const App: React.FC = () => {
               {activeTab === 'dashboard' && (
                 <div className="absolute inset-0 z-[60] flex flex-col items-center justify-center pointer-events-none animate-premium-fade bg-black/60 px-4">
                   <div className="text-center w-full flex flex-col items-center">
-                    <h2 className="text-[10px] md:text-[14px] font-black tracking-[0.8em] md:tracking-[1.6em] text-[#00B0F0] aimbot-glow-text uppercase mb-2 md:mb-4 mr-[-0.8em] md:mr-[-1.6em]">
-                      Yield Aggregator for Prediction Markets
-                    </h2>
-
-                    <p className="font-mono text-[11px] md:text-[13px] text-zinc-300 uppercase tracking-widest mb-6 md:mb-10 animate-premium-fade">
+                    <h2 className="text-[10px] md:text-[14px] font-black tracking-[0.2em] md:tracking-[0.4em] text-[#00B0F0] aimbot-glow-text uppercase mb-6 md:mb-10">
                       Automated Agents for Prediction Markets
-                    </p>
+                    </h2>
 
                     <h1 className="text-[14vw] md:text-[10vw] font-[900] uppercase tracking-[-0.04em] text-white leading-none mb-6 md:mb-10">
                       Coming Soon
