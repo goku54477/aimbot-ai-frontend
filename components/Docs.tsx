@@ -40,7 +40,7 @@ const Docs: React.FC = () => {
         <Markdown
           remarkPlugins={[remarkGfm]}
           components={{
-            h1: ({node, ...props}) => <h1 className="text-2xl md:text-4xl leading-snug md:leading-normal font-black text-[#00B0F0] mb-10 uppercase tracking-widest aimbot-glow-text" {...props} />,
+            h1: ({node, ...props}) => <h1 className="text-xl md:text-3xl leading-snug md:leading-normal font-black text-[#00B0F0] mb-10 uppercase tracking-widest aimbot-glow-text" {...props} />,
             h2: ({node, ...props}) => <h2 className="text-xl md:text-2xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4 tracking-widest uppercase" {...props} />,
             h3: ({node, ...props}) => <h3 className="text-lg md:text-xl font-semibold text-zinc-200 mt-10 mb-4 flex items-center tracking-widest uppercase before:content-[''] before:block before:w-2 before:h-2 before:bg-[#00B0F0] before:mr-3 before:shadow-[0_0_10px_#00B0F0]" {...props} />,
             p: ({node, ...props}) => <p className="text-zinc-400 text-sm md:text-[15px] leading-relaxed mb-6 font-medium selection:bg-[#00B0F0]/30 selection:text-white" {...props} />,
