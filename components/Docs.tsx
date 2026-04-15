@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import paperContent from '../forecasting-engine-whitepaper.md?raw';
 
 const Docs: React.FC = () => {
@@ -8,6 +9,7 @@ const Docs: React.FC = () => {
     <div className="max-w-5xl mx-auto py-10 px-6 animate-premium-fade">
       <div className="bg-black/50 border border-white/10 rounded-xl p-8 md:p-14 shadow-[0_0_40px_rgba(0,176,240,0.05)] backdrop-blur-md">
         <Markdown
+          remarkPlugins={[remarkGfm]}
           components={{
             h1: ({node, ...props}) => <h1 className="text-3xl md:text-5xl font-black text-[#00B0F0] mb-8 uppercase tracking-widest aimbot-glow-text" {...props} />,
             h2: ({node, ...props}) => <h2 className="text-xl md:text-2xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4 tracking-widest uppercase" {...props} />,
