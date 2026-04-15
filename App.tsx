@@ -10,20 +10,30 @@ import Logo from './components/Logo';
 import WaitlistForm from './components/WaitlistForm';
 
 const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'roadmap' | 'docs' | 'analytics'>('dashboard');
+  const initialTab = window.location.pathname === '/research' ? 'docs' : 'dashboard';
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'roadmap' | 'docs' | 'analytics'>(initialTab);
   const [loading, setLoading] = useState(true);
 
-  const isLockedView = activeTab === 'dashboard' || activeTab === 'docs' || activeTab === 'analytics' || activeTab === 'roadmap';
+  const isLockedView = activeTab === 'dashboard' || activeTab === 'analytics' || activeTab === 'roadmap';
 
   const handleRequestAccess = () => {
     window.open('https://t.me/Aimbot_AI_Chat', '_blank');
+  };
+
+  const handleTabChange = (tab: 'dashboard' | 'roadmap' | 'docs' | 'analytics') => {
+    setActiveTab(tab);
+    if (tab === 'docs') {
+      window.history.pushState(null, '', '/research');
+    } else {
+      window.history.pushState(null, '', '/');
+    }
   };
 
   const NavButtons = () => (
     <>
       <button
         title="Dashboard"
-        onClick={() => setActiveTab('dashboard')}
+        onClick={() => handleTabChange('dashboard')}
         className={`p-3.5 rounded-xl transition-all duration-300 relative group ${activeTab === 'dashboard' ? 'text-white bg-[#00B0F0]/30' : 'text-zinc-400 hover:text-white hover:bg-white/10'}`}
       >
         {activeTab === 'dashboard' && <div className="absolute inset-0 border-2 border-[#00B0F0] rounded-xl shadow-[0_0_20px_rgba(0,176,240,0.5)]"></div>}
@@ -32,7 +42,7 @@ const App: React.FC = () => {
 
       <button
         title="Roadmap"
-        onClick={() => setActiveTab('roadmap')}
+        onClick={() => handleTabChange('roadmap')}
         className={`p-3.5 rounded-xl transition-all duration-300 relative group ${activeTab === 'roadmap' ? 'text-white bg-[#00B0F0]/30' : 'text-zinc-400 hover:text-white hover:bg-white/10'}`}
       >
         {activeTab === 'roadmap' && <div className="absolute inset-0 border-2 border-[#00B0F0] rounded-xl shadow-[0_0_20px_rgba(0,176,240,0.5)]"></div>}
@@ -40,8 +50,8 @@ const App: React.FC = () => {
       </button>
 
       <button
-        title="Documentation"
-        onClick={() => setActiveTab('docs')}
+        title="Research Paper"
+        onClick={() => handleTabChange('docs')}
         className={`p-3.5 rounded-xl transition-all duration-300 relative group ${activeTab === 'docs' ? 'text-white bg-[#00B0F0]/30' : 'text-zinc-400 hover:text-white hover:bg-white/10'}`}
       >
         {activeTab === 'docs' && <div className="absolute inset-0 border-2 border-[#00B0F0] rounded-xl shadow-[0_0_20px_rgba(0,176,240,0.5)]"></div>}
@@ -50,7 +60,7 @@ const App: React.FC = () => {
 
       <button
         title="Analytics"
-        onClick={() => setActiveTab('analytics')}
+        onClick={() => handleTabChange('analytics')}
         className={`p-3.5 rounded-xl transition-all duration-300 relative group ${activeTab === 'analytics' ? 'text-white bg-[#00B0F0]/30' : 'text-zinc-400 hover:text-white hover:bg-white/10'}`}
       >
         {activeTab === 'analytics' && <div className="absolute inset-0 border-2 border-[#00B0F0] rounded-xl shadow-[0_0_20px_rgba(0,176,240,0.5)]"></div>}
@@ -145,7 +155,7 @@ const App: React.FC = () => {
                 </div>
               )}
 
-              {(activeTab === 'docs' || activeTab === 'analytics' || activeTab === 'roadmap') && (
+              {(activeTab === 'analytics' || activeTab === 'roadmap') && (
                 <SyncPlaceholder title="Syncing" subtitle="Protocol Calibration in Progress" />
               )}
 
