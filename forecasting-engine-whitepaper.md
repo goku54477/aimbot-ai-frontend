@@ -96,9 +96,9 @@ Figure 2 illustrates the intended comparative interpretation. The key claim is n
 ```mermaid
 xychart-beta
     title "Normalized forecasting utility"
-    x-axis [Consensus, Single_model, Agent_ensemble, Forecasting_Engine]
+    x-axis [Consensus, Single_Model, Agent_Ensemble, Full_System]
     y-axis "Utility" 0 --> 1.0
-    bar [0.60, 0.68, 0.76, 0.82]
+    line [0.60, 0.68, 0.76, 0.82]
 ```
 
 Table 2 provides a second placeholder focused on execution-oriented evaluation.
@@ -123,7 +123,7 @@ Figure 3 visualizes the scaling frontier this paper assumes. Higher-quality orch
 ```mermaid
 xychart-beta
     title "Decision quality versus relative latency"
-    x-axis [Rules_only, Single_LLM, Planner_plus_Analyst, Multi_agent, Full_orchestration]
+    x-axis [Rules_Only, Single_LLM, Planner_Analyst, Multi_Agent, Full_System]
     y-axis "Relative quality" 0 --> 1.0
     line [0.22, 0.45, 0.64, 0.80, 0.88]
 ```

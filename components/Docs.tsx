@@ -9,6 +9,10 @@ mermaid.initialize({
   startOnLoad: false,
   theme: 'dark',
   fontFamily: 'JetBrains Mono, monospace',
+  xyChart: {
+    width: 850,
+    height: 400
+  }
 });
 
 const MermaidChart = ({ code }: { code: string }) => {
