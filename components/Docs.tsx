@@ -1,8 +1,33 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import mermaid from 'mermaid';
 import paperContent from '../forecasting-engine-whitepaper.md?raw';
+
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'dark',
+  fontFamily: 'JetBrains Mono, monospace',
+});
+
+const MermaidChart = ({ code }: { code: string }) => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (ref.current && code) {
+      mermaid.render(`mermaid-${Math.random().toString(36).substring(2, 9)}`, code)
+        .then((result) => {
+          if (ref.current) {
+            ref.current.innerHTML = result.svg;
+          }
+        })
+        .catch(err => console.error("Mermaid render error:", err));
+    }
+  }, [code]);
+
+  return <div ref={ref} className="flex justify-center my-10 overflow-x-auto w-full shadow-[0_0_20px_rgba(0,176,240,0.05)] rounded-xl border border-white/5 p-4 bg-black/30 bg-opacity-40" />;
+};
 
 const Docs: React.FC = () => {
   return (
@@ -23,7 +48,14 @@ const Docs: React.FC = () => {
             th: ({node, ...props}) => <th className="bg-white/5 border border-white/10 p-3 md:p-4 text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#00B0F0]" {...props} />,
             td: ({node, ...props}) => <td className="border border-white/10 p-3 md:p-4 text-xs md:text-sm text-zinc-400 font-mono" {...props} />,
             pre: ({node, ...props}) => <pre className="bg-black border border-[#00B0F0]/20 rounded-lg p-5 overflow-x-auto my-10 font-mono text-sm leading-tight text-[#00B0F0] shadow-[0_0_20px_rgba(0,176,240,0.05)]" {...props} />,
-            code: ({node, ...props}) => <code className="font-mono text-[0.9em] bg-white/5 px-1.5 py-0.5 rounded text-zinc-300" {...props} />,
+            code: ({node, className, children, ...props}) => {
+              const match = /language-(\w+)/.exec(className || '');
+              const language = match ? match[1] : '';
+              if (language === 'mermaid') {
+                return <MermaidChart code={String(children).replace(/\n$/, '')} />;
+              }
+              return <code className={`font-mono text-[0.9em] bg-white/5 px-1.5 py-0.5 rounded text-zinc-300 ${className || ''}`} {...props}>{children}</code>;
+            },
           }}
         >
           {paperContent}
